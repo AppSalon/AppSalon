@@ -27,8 +27,8 @@ class Email
         $mail->Host = 'smtp.mailtrap.io';
         $mail->SMTPAuth = true;
         $mail->Port = 2525;
-        $mail->Username = 'a9b1d0f5bd3d56';
-        $mail->Password = 'cf24ea8ffe1ff1';
+        $mail->Username = '51bc9bfdac09bd';
+        $mail->Password = '3f6ab7a484d39d';
 
         $mail->setFrom('cuentas@appsalon.com');
         $mail->addAddress('cuentas@appsalon.com', 'AppSalon.com');
