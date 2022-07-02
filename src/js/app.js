@@ -342,7 +342,6 @@ async function reservarCita() {
         });
 
         const resultado = await respuesta.json();
-        console.log(resultado);
 
         if(resultado.resultado) {
             Swal.fire({
