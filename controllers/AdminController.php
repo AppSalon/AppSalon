@@ -7,8 +7,8 @@ use MVC\Router;
 
 class AdminController {
     public static function index(Router $router) {
-        session_start();
-
+        session_start(); //Inica la sesion
+            //Con esto verifica que el usuario es administador
         isAdmin();
 
         $fecha = $_GET['fecha'] ?? date('Y-m-d');
