@@ -42,7 +42,7 @@ class Router
             // Call user fn va a llamar una función cuando no sabemos cual sera
             call_user_func($fn, $this); // This es para pasar argumentos
         } else {
-            echo "Página No Encontrada o Ruta no válida";
+            echo "Página No Encontrada o Ruta no válida"; //al no encontar la pagina te mostara el mensaje
         }
     }
 
@@ -57,7 +57,7 @@ class Router
         ob_start(); // Almacenamiento en memoria durante un momento...
 
         // entonces incluimos la vista en el layout
-        include_once __DIR__ . "/views/$view.php";
+        include_once __DIR__ . "/views/$view.php"; //quita la extenciaon php en el navegador
         $contenido = ob_get_clean(); // Limpia el Buffer
         include_once __DIR__ . '/views/layout.php';
     }
