@@ -1,6 +1,7 @@
 <div class="campo">
     <label for="nombre">Nombre</label>
-    <input 
+    <input
+        data-cy="nombre-servicio" 
         type="text"
         id="nombre"
         placeholder="Nombre Servicio"
@@ -11,7 +12,8 @@
 
 <div class="campo">
     <label for="precio">Precio</label>
-    <input 
+    <input
+        data-cy="valor-servicio" 
         type="number"
         id="precio"
         placeholder="Precio Servicio"

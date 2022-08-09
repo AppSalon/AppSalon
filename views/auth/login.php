@@ -1,14 +1,15 @@
-<h1 class="nombre-pagina">Hola</h1>
-<p class="descripcion-pagina">Inicia sesión con tus datos</p>
+<h1 data-cy="heading-sitio" class="nombre-pagina">Hola</h1>
+<p data-cy="heading-inicio" class="descripcion-pagina">Inicia sesión con tus datos</p>
 
 <?php  
     include_once __DIR__ . "/../templates/alertas.php";
 ?>
 
-<form class="formulario" method="POST" action="/">
+<form data-cy="input-inicio" class="formulario" method="POST" action="/">
     <div class="campo">
         <label for="email">Email</label>
         <input
+            data-cy="email" 
             type="email"
             id="email"
             placeholder="Tu Email"
@@ -18,7 +19,8 @@
 
     <div class="campo">
         <label for="password">Password</label>
-        <input 
+        <input
+            data-cy="password"
             type="password"
             id="password"
             placeholder="Tu Password"
@@ -26,10 +28,10 @@
         />
     </div>
 
-    <input type="submit" class="boton" value="Iniciar Sesión">
+    <input data-cy="enlace-boton" type="submit" class="boton" value="Iniciar Sesión">
 </form>
 
 <div class="acciones">
-    <a href="/crear-cuenta">¿Aún no tienes una cuenta? Crear una</a>
-    <a href="/olvide">¿Olvidaste tu password?</a>
+    <a data-cy="enlace-crear" href="/crear-cuenta">¿Aún no tienes una cuenta? Crear una</a>
+    <a data-cy="enlace-recuperar" href="/olvide">¿Olvidaste tu password?</a>
 </div>

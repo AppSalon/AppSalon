@@ -8,5 +8,5 @@
 
 <form method="POST" class="formulario">
     <?php include_once __DIR__ . '/formulario.php'; ?>
-    <input type="submit" class="boton" value="Actualizar">
+    <input data-cy="update-boton" type="submit" class="boton" value="Actualizar">
 </form>
