@@ -7,9 +7,9 @@
 
 <div id="app">
     <nav class="tabs">
-        <button class="actual" type="button" data-paso="1">Servicios</button>
-        <button type="button" data-paso="2">Información Cita</button>
-        <button type="button" data-paso="3">Resumen</button>
+        <button data-cy="1" class="actual" type="button" data-paso="1">Servicios</button>
+        <button data-cy="2" type="button" data-paso="2">Información Cita</button>
+        <button data-cy="3" type="button" data-paso="3">Resumen</button>
     </nav>
 
     <div id="paso-1" class="seccion">
