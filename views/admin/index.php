@@ -1,4 +1,4 @@
-<h1 class="nombre-pagina">Panel de Administración</h1>
+<h1 data-cy="heading-admin" class="nombre-pagina">Panel de Administración</h1>
 
 <?php
 include_once __DIR__ . '/../templates/barra.php';
@@ -9,7 +9,8 @@ include_once __DIR__ . '/../templates/barra.php';
     <form class="formulario">
         <div class="campo">
             <label for="fecha">Fecha</label>
-            <input 
+            <input
+                data-cy="calendar" 
                 type="date" 
                 id="fecha" 
                 name="fecha"
@@ -62,7 +63,8 @@ include_once __DIR__ . '/../templates/barra.php';
                             name="id" 
                             value="<?php echo $cita->id; ?>"
                         />
-                        <input 
+                        <input
+                            data-cy="boton-eliminar" 
                             type="submit"
                             class="boton-eliminar"
                             value="Eliminar"

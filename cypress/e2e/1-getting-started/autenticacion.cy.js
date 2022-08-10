@@ -11,6 +11,7 @@ describe('Probar la autenticación', () => {
         cy.wait(5000);
 
         // El usuario exista
+
         cy.get('[data-cy="email"]').type('hola@hola.com');
         cy.get('[data-cy="password"]').type('123456');
         cy.get('[data-cy="input-inicio"]').submit();
@@ -30,6 +31,7 @@ describe('Probar la autenticación', () => {
         // Cerrar sesión
         cy.get('[data-cy="cerrar-sesion"]').click();
     });
+
     
     it('Prueba de autenticación no aprobada', () => {
         cy.visit('/');
@@ -46,5 +48,4 @@ describe('Probar la autenticación', () => {
         cy.get('[data-cy="input-inicio"]').submit();
         cy.wait(5000);
     });
-
 });

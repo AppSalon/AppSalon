@@ -17,12 +17,10 @@ describe('Funcionamiento de los formularios', () => {
         cy.get('[data-cy="input-telefono"]').type('7351517549');
         cy.get('[data-cy="input-correo"]').type('jesus02@hola.com');
         cy.get('[data-cy="input-password"]').type('123456543');
-
         cy.get('[data-cy="formulario-crear"]').submit();
         cy.get('[data-cy="notificacion"]').should('exist');
         cy.get('[data-cy="notificacion"]').invoke('text').should('equal', 'Confirma tu cuenta');
     });
-    
     it('Llena los campos del formulario usuario existente', () => {
         cy.visit('/crear-cuenta')
         cy.get('[data-cy="input-nombre"]').type('Osmar2');
