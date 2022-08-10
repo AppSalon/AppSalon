@@ -71,6 +71,8 @@ include_once __DIR__ . '/../templates/barra.php';
             <?php } 
         } // Fin de Foreach ?>
     </ul>
+
+    <ul id="listado-pagos" class="listado-pagos"></ul>
 </div>
 
 <?php
