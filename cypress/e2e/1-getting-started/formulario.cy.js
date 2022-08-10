@@ -12,14 +12,25 @@ describe('Funcionamiento de los formularios', () => {
     });
 
     it('Llena los campos del formulario', () => {
-        cy.get('[data-cy="input-nombre"]').type('Osmar');
-        cy.get('[data-cy="input-apellido"]').type('Ramírez');
-        cy.get('[data-cy="input-telefono"]').type('2441112873');
-        cy.get('[data-cy="input-correo"]').type('hola@hola.com');
-        cy.get('[data-cy="input-password"]').type('123456');
+        cy.get('[data-cy="input-nombre"]').type('jesus03');
+        cy.get('[data-cy="input-apellido"]').type('castillo03');
+        cy.get('[data-cy="input-telefono"]').type('7351517549');
+        cy.get('[data-cy="input-correo"]').type('jesus02@hola.com');
+        cy.get('[data-cy="input-password"]').type('123456543');
 
         cy.get('[data-cy="formulario-crear"]').submit();
         cy.get('[data-cy="notificacion"]').should('exist');
         cy.get('[data-cy="notificacion"]').invoke('text').should('equal', 'Confirma tu cuenta');
+    });
+    
+    it('Llena los campos del formulario usuario existente', () => {
+        cy.visit('/crear-cuenta')
+        cy.get('[data-cy="input-nombre"]').type('Osmar2');
+        cy.get('[data-cy="input-apellido"]').type('Ramírez3');
+        cy.get('[data-cy="input-telefono"]').type('2441112843');
+        cy.get('[data-cy="input-correo"]').type('holam@hola.com');
+        cy.get('[data-cy="input-password"]').type('123456');
+        cy.get('[data-cy="formulario-crear"]').submit();
+        cy.get('[data-cy="alertas"]').contains('El usuario ya está registrado');
     });
 });

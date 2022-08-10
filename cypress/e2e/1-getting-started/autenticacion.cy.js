@@ -30,4 +30,21 @@ describe('Probar la autenticación', () => {
         // Cerrar sesión
         cy.get('[data-cy="cerrar-sesion"]').click();
     });
+    
+    it('Prueba de autenticación no aprobada', () => {
+        cy.visit('/');
+
+        cy.get('[data-cy="input-inicio"]').should('exist');
+
+        // Ingresar los datos
+        cy.get('[data-cy="input-inicio"]').submit();
+        cy.wait(5000);
+
+        // El usuario no exista
+        cy.get('[data-cy="email"]').type('hola12@hola.com');
+        cy.get('[data-cy="password"]').type('1234156');
+        cy.get('[data-cy="input-inicio"]').submit();
+        cy.wait(5000);
+    });
+
 });
