@@ -1,4 +1,4 @@
-node_modules/
+node_modules
 appsalon_mvc.sql
 package.json
 package-lock.json
