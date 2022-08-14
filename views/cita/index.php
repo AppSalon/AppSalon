@@ -36,6 +36,7 @@
             <div class="campo"> <!-- Se muestra la cita y se evita seleccionar fechas anteriores y el día actual -->
                 <label for="fecha">Fecha</label>
                 <input
+                    data-cy="fecha" 
                     id="fecha"
                     type="date"
                     min="<?php echo date('Y-m-d', strtotime('+1 day')); ?>"
@@ -45,6 +46,7 @@
             <div class="campo">
                 <label for="hora">Hora</label>
                 <input
+                    data-cy="hora" 
                     id="hora"
                     type="time"
                 />
@@ -65,7 +67,9 @@
 
         <button
             id="siguiente"
-            class="boton" 
+            class="boton"
+            data-cy="BTN-SIG" 
+
         > Siguiente &raquo;</button> <!-- &raquo muestra la flecha de navegación hacia adelante -->
     </div>
 </div>

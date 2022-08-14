@@ -12,11 +12,11 @@ describe('Funcionamiento de los formularios', () => {
     });
 
     it('Llena los campos del formulario', () => {
-        cy.get('[data-cy="input-nombre"]').type('jesus03');
-        cy.get('[data-cy="input-apellido"]').type('castillo03');
-        cy.get('[data-cy="input-telefono"]').type('7351517549');
-        cy.get('[data-cy="input-correo"]').type('jesus02@hola.com');
-        cy.get('[data-cy="input-password"]').type('123456543');
+        cy.get('[data-cy="input-nombre"]').type('jesus04');
+        cy.get('[data-cy="input-apellido"]').type('castillo04');
+        cy.get('[data-cy="input-telefono"]').type('7351517544');
+        cy.get('[data-cy="input-correo"]').type('jesus03@hola.com');
+        cy.get('[data-cy="input-password"]').type('123456544');
         cy.get('[data-cy="formulario-crear"]').submit();
         cy.get('[data-cy="notificacion"]').should('exist');
         cy.get('[data-cy="notificacion"]').invoke('text').should('equal', 'Confirma tu cuenta');
