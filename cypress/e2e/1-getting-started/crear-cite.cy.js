@@ -4,10 +4,10 @@ describe('Probar crear cita', () => {
     it('Crear cita y navegacion', () => {
         
         cy.visit('/'); //Esto hace que visites Raiz
-        cy.get('[data-cy="email"]').type('algo12.algo@algo.com'); //esto rellena automaticamente los datos del login 
-        cy.get('[data-cy="password"]').type('password12');
+        cy.get('[data-cy="email"]').type('hola@hola.com');
+        cy.get('[data-cy="password"]').type('123456');
         cy.get('[data-cy="input-inicio"]').submit();// Con esto da clik para inicar
-        cy.get('[data-id-servicio="5"]').click();
+        cy.get('[data-id-servicio="8"]').click();
         cy.wait(1000);
         cy.get('[data-cy="BTN-SIG"]').click();
         cy.wait(1000);

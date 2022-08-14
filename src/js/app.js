@@ -305,6 +305,7 @@ function mostrarResumen() {
     // Botón para crear una cita
     const botonReservar = document.createElement('BUTTON');
     botonReservar.classList.add('boton');
+    botonReservar.dataset.idCita = "cita";
     botonReservar.textContent = 'Reservar Cita';
     botonReservar.onclick = reservarCita;
 

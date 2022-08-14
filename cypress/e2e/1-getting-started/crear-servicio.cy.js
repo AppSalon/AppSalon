@@ -3,8 +3,8 @@
 describe('Probar el agregar un nuevo servicio', () => {
     it('Agregar servicio al catálogo', () => {
         cy.visit('/');
-        cy.get('[data-cy="email"]').type('osmar34aldair@gmail.com');
-        cy.get('[data-cy="password"]').type('password');
+        cy.get('[data-cy="email"]').type('prueba1@gmail.com');
+        cy.get('[data-cy="password"]').type('789456123');
         cy.get('[data-cy="input-inicio"]').submit();
 
         cy.get('[data-cy="boton-crear"]').click();
